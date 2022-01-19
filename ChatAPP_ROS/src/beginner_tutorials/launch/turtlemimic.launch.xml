@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<article lang="">
+  <para><anchor id="CA-91a3946a9c4cf7301bb55ec0c3f8a77f6c8f9777"/>&lt;launch&gt;</para>
+  <para>
+    <anchor id="CA-91a3946a9c4cf7301bb55ec0c3f8a77f6c8f9777_2"/>
+    <anchor id="line-2-5"/>
+  </para>
+  <para><anchor id="CA-91a3946a9c4cf7301bb55ec0c3f8a77f6c8f9777_3"/><anchor id="line-3-4"/>  &lt;group ns="turtlesim1"&gt;</para>
+  <para><anchor id="CA-91a3946a9c4cf7301bb55ec0c3f8a77f6c8f9777_4"/><anchor id="line-4-3"/>    &lt;node pkg="turtlesim" name="sim" type="turtlesim_node"/&gt;</para>
+  <para><anchor id="CA-91a3946a9c4cf7301bb55ec0c3f8a77f6c8f9777_5"/><anchor id="line-5-3"/>  &lt;/group&gt;</para>
+  <para>
+    <anchor id="CA-91a3946a9c4cf7301bb55ec0c3f8a77f6c8f9777_6"/>
+    <anchor id="line-6-2"/>
+  </para>
+  <para><anchor id="CA-91a3946a9c4cf7301bb55ec0c3f8a77f6c8f9777_7"/><anchor id="line-7-2"/>  &lt;group ns="turtlesim2"&gt;</para>
+  <para><anchor id="CA-91a3946a9c4cf7301bb55ec0c3f8a77f6c8f9777_8"/><anchor id="line-8-2"/>    &lt;node pkg="turtlesim" name="sim" type="turtlesim_node"/&gt;</para>
+  <para><anchor id="CA-91a3946a9c4cf7301bb55ec0c3f8a77f6c8f9777_9"/><anchor id="line-9-2"/>  &lt;/group&gt;</para>
+  <para>
+    <anchor id="CA-91a3946a9c4cf7301bb55ec0c3f8a77f6c8f9777_10"/>
+    <anchor id="line-10-2"/>
+  </para>
+  <para><anchor id="CA-91a3946a9c4cf7301bb55ec0c3f8a77f6c8f9777_11"/><anchor id="line-11-2"/>  &lt;node pkg="turtlesim" name="mimic" type="mimic"&gt;</para>
+  <para><anchor id="CA-91a3946a9c4cf7301bb55ec0c3f8a77f6c8f9777_12"/><anchor id="line-12-2"/>    &lt;remap from="input" to="turtlesim1/turtle1"/&gt;</para>
+  <para><anchor id="CA-91a3946a9c4cf7301bb55ec0c3f8a77f6c8f9777_13"/><anchor id="line-13-2"/>    &lt;remap from="output" to="turtlesim2/turtle1"/&gt;</para>
+  <para><anchor id="CA-91a3946a9c4cf7301bb55ec0c3f8a77f6c8f9777_14"/><anchor id="line-14-2"/>  &lt;/node&gt;</para>
+  <para>
+    <anchor id="CA-91a3946a9c4cf7301bb55ec0c3f8a77f6c8f9777_15"/>
+    <anchor id="line-15-2"/>
+  </para>
+  <para><anchor id="CA-91a3946a9c4cf7301bb55ec0c3f8a77f6c8f9777_16"/><anchor id="line-16-2"/>&lt;/launch&gt;</para>
+  <para/>
+</article>
