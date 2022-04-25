@@ -2,7 +2,7 @@ import cv2 as cv
 from matplotlib.pyplot import gray
 import numpy as np
 
-videoCapture=cv.VideoCapture("tennisVid.mp4")
+videoCapture=cv.VideoCapture(1)
 prevCircle=None
 dist= lambda x1,x2,y1,y2: (x1-x2)**2+(y1-y2)**2
 
@@ -13,7 +13,7 @@ while True:
     grayFrame=cv.cvtColor(frame,cv.COLOR_BGR2GRAY)
     blurFrame=cv.GaussianBlur(grayFrame,(17,17),0)
 
-    circles=cv.HoughCircles(blurFrame,cv.HOUGH_GRADIENT,0.8,20,param1=50,param2=15,minRadius=1,maxRadius=5)
+    circles=cv.HoughCircles(blurFrame,cv.HOUGH_GRADIENT,1.2,20,param1=100,param2=15,minRadius=1,maxRadius=100)
 
     if circles is not None:
         circles= np.uint16(np.around(circles))
