@@ -24,11 +24,11 @@ def adjust_mask(mask, flat=False):
         class_map = np.all(equality, axis = -1)
         semantic_map.append(class_map)
 
-        semantic_map = np.stack(semantic_map, axis=-1)
-        if flat:
-            semantic_map = np.reshape(semantic_map, (-1,256*256))
+    semantic_map = np.stack(semantic_map, axis=-1)
+    if flat:
+        semantic_map = np.reshape(semantic_map, (-1,128*128))
         
-        return np.float32(semantic_map)
+    return np.float32(semantic_map)
 
 data_gen_args = dict(rotation_range=0.2,
                     width_shift_range=0.05,
@@ -67,6 +67,7 @@ mask_generator = mask_datagen.flow_from_directory(data_path,
     classes=['train_labels'],
     seed=seed,
     batch_size = batch_size,
+    color_mode= 'rgb',
     target_size=(128,128))
 
 train_generator = zip(image_generator, mask_generator)
@@ -96,6 +97,7 @@ mask_generator_val = mask_datagen_val.flow_from_directory(
     classes=['val_labels'],
     seed=seed,
     batch_size=batch_size,
+    color_mode='rgb',
     target_size=(128,128)
 )
 
