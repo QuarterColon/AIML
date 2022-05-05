@@ -30,7 +30,7 @@ def LoadData(frameObj = None, imgPath = None, maskPath = None, shape=256):
         img = plt.imread(imgAddr + imgNames[i])
         mask = plt.imread(maskAddr + maskNames[i])
 
-        img = cv2.resize(img, (shape, shape))
+        img = cv2.resize(img, (shape,shape))
         mask = cv2.resize(mask, (shape, shape))
 
         frameObj['img'].append(img)
@@ -41,6 +41,7 @@ def LoadData(frameObj = None, imgPath = None, maskPath = None, shape=256):
 if __name__ == "__main__":
     framObjTrain = LoadData(framObjTrain, imgPath='D:/Ankit_Chakraborty/Final_TASK/CamVid/train', maskPath='D:/Ankit_Chakraborty/Final_TASK/CamVid/train_labels', shape=256)
     framObjVal = LoadData(framObjVal, imgPath='D:/Ankit_Chakraborty/Final_TASK/CamVid/test', maskPath='D:/Ankit_Chakraborty/Final_TASK/CamVid/test_labels', shape=256)
+    print(np.array(framObjTrain['img']).shape)
 
 
 
